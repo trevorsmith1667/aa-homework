@@ -1,7 +1,7 @@
 class Stack
-    attr_reader :stack
+    attr_reader :ivar
     def initialize
-     @stack = []
+     @ivar = []
     end
 
     def push(el)
@@ -9,38 +9,38 @@ class Stack
     end
 
     def pop
-     self.pop
+     ivar.pop
     end
 
     def peek
-      self.last 
+      ivar.last 
     end
   end
 
 
 class Queue 
-    attr_reader :queue
+    attr_reader :ivar
     def initialize 
-        @queue = []
+        @ivar = []
     end 
 
     def enqueue(el)
-        self.shift(el)
+        ivar.shift(el)
     end 
 
     def dequeue
-        self.pop 
+        ivar.pop 
     end 
 
     def peek
-      self.first
+      ivar.first
     end
 end 
 
 class Map
-    attr_reader :map
+    attr_reader :ivar
     def initialize 
-        @map = []
+        @ivar = []
     end 
 
     def set(key, value)
@@ -48,13 +48,13 @@ class Map
         if idx 
         map[idx][1] = value
         else 
-            map << [key, value]
+            ivar << [key, value]
         end 
         value 
     end 
 
     def get(key)
-        map.each {|pair| return pair[1] if pair[0] == key}
+        ivar.each {|pair| return pair[1] if pair[0] == key}
     end 
 
     def delete(key)
