@@ -15,6 +15,8 @@ class Stack
     def peek
       ivar.last 
     end
+    private
+    attr_reader :ivar
   end
 
 
@@ -35,6 +37,8 @@ class Queue
     def peek
       ivar.first
     end
+    private
+    attr_reader :ivar
 end 
 
 class Map
